@@ -10,6 +10,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'export BROWSER=$(BROWSER)'
 - task: Maven@3
 
   inputs:
@@ -21,5 +25,4 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-
-    goals: 'clean compile'
+    goals: 'clean test'
