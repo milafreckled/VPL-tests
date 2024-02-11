@@ -6,26 +6,29 @@
 trigger:
 - main
 
-pool:
-  vmImage: 'ubuntu-latest'
+stages:
+- stage: __default
+  jobs:
+  - job: Job
+    pool:
+      vmImage: 'ubuntu-latest'
+    variables:
+        - group: GlobalVariables
 
-steps:
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'export BROWSER=$(BROWSER)'
-- task: Maven@3
+    steps:
+    - task: Bash@3
+      inputs:
+        targetType: 'inline'
+        script: 'export BROWSER=$(BROWSER)'
+    - task: Maven@3
 
-  inputs:
+      inputs:
 
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'clean test -Dgroups=$(Priority)'
-
-variables:
-- group: GlobalVariables
+        mavenPomFile: 'pom.xml'
+        mavenOptions: '-Xmx3072m'
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.8'
+        jdkArchitectureOption: 'x64'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        goals: 'clean test -Dgroups=$(Priority)'
