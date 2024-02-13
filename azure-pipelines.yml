@@ -32,3 +32,23 @@ stages:
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
         goals: 'clean test -Dgroups=$(Priority)'
+        
+    - task: Bash@3
+      displayName: "display files from project folder"
+      inputs:
+        targetType: 'inline'
+        script: 'ls $(System.DefaultWorkingDirectory)'
+    
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Log File as Artifact'
+      condition: always()
+      inputs:         
+          PathtoPublish: $(System.DefaultWorkingDirectory)/target/logs
+          ArtifactName: logs
+    
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Screenshot File as Artifact'
+      condition: always()
+      inputs:         
+          PathtoPublish: $(System.DefaultWorkingDirectory)/target/screenshots
+          ArtifactName: logs
