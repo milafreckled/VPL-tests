@@ -8,10 +8,22 @@ trigger:
 
 stages:
 - stage: __default
+
   jobs:
   - job: Job
     pool:
       vmImage: 'ubuntu-latest'
+    strategy:
+      matrix:
+        Tests_High: 
+          TestsPriority: "High"
+        Tests_Medium:
+          TestsPriority: "Medium"
+        Tests_Low:
+          TestsPriority: "Low"
+
+      maxParallel: 3 
+  
     variables:
         - group: GlobalVariables
 
@@ -31,7 +43,7 @@ stages:
         jdkArchitectureOption: 'x64'
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
-        goals: 'clean test -Dgroups=$(Priority)'
+        goals: 'clean test -Dgroups=$(TestsPriority)'
         
     - task: Bash@3
       displayName: "display files from project folder"
