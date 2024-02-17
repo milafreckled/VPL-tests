@@ -29,6 +29,17 @@ stages:
 
     steps:
     - task: Bash@3
+      displayName: 'Create Java test image'
+      inputs:
+        targetType: 'inline'
+        script: 'docker build -t seleniumtests .'
+        
+    - task: Bash@3
+      displayName: 'Run Java test container'
+      inputs:
+        targetType: 'inline'
+        script: 'docker run -e "BROWSER=chrome" --name tests seleniumtests'
+    - task: Bash@3
       inputs:
         targetType: 'inline'
         script: 'export BROWSER=$(BROWSER)'
