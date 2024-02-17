@@ -43,6 +43,43 @@ stages:
       inputs:
         targetType: 'inline'
         script: 'export BROWSER=$(BROWSER)'
+
+    - task: Bash@3
+      displayName: 'Start Java Test Container'
+      inputs:
+        targetType: inline
+        script: 'docker start tests' 
+
+    - task: Bash@3
+      displayName: 'Copy Screenshots From Run Java Test Container'
+      inputs:
+        targetType: inline
+        script: 'docker cp tests:/target/screenshots screenshots'
+        
+    - task: Bash@3
+      displayName: 'Copy Logs From Run Java Test Container'
+      inputs:
+        targetType: inline
+        script: 'docker cp tests:/target/logs logs'
+
+    - task: Bash@3
+      displayName: 'Display Folders from Default Working Directory'
+      inputs:
+        targetType: inline
+        script: 'ls $(System.DefaultWorkingDirectory)'
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/screenshots'
+        publishLocation: 'pipeline'
+        artifact: 'screenshots'
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/logs'
+        publishLocation: 'pipeline'
+        artifact: 'logs'
+
     - task: Maven@3
 
       inputs:
