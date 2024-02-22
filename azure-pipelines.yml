@@ -103,12 +103,12 @@ stages:
       displayName: 'Publish Log File as Artifact'
       condition: always()
       inputs:         
-          PathtoPublish: $(System.DefaultWorkingDirectory)/target/logs
+          PathtoPublish: $(System.DefaultWorkingDirectory)/logs
           ArtifactName: logs
     
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Screenshot File as Artifact'
       condition: always()
       inputs:         
-          PathtoPublish: $(System.DefaultWorkingDirectory)/target/screenshots
-          ArtifactName: logs
+          PathtoPublish: $(System.DefaultWorkingDirectory)/screenshots
+          ArtifactName: screenshots
