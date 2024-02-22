@@ -49,7 +49,34 @@ stages:
       inputs:
         targetType: inline
         script: 'docker start tests' 
+
+    - task: Bash@3
+      displayName: 'Copy Screenshots From Run Java Test Container'
+      condition: always()
+      inputs:
+        targetType: inline
+        script: 'docker cp tests:/target/screenshots screenshots'
+        
+    - task: Bash@3
+      displayName: 'Copy Logs From Run Java Test Container'
+      condition: always()
+      inputs:
+        targetType: inline
+        script: 'docker cp tests:/target/logs logs'
     
+    - task: Bash@3
+      displayName: Copy Test-Output From Run Java Test Container
+      condition: always()
+      inputs:
+        targetType: inline
+        script: docker cp tests:/target/surefire-reports testoutput
+
+    - task: Bash@3
+      displayName: 'Display Folders from Default Working Directory'
+      inputs:
+        targetType: inline
+        script: 'ls $(System.DefaultWorkingDirectory)'
+
     - task: PublishPipelineArtifact@1
       inputs:
         targetPath: '$(System.DefaultWorkingDirectory)/screenshots'
@@ -61,24 +88,18 @@ stages:
         targetPath: '$(System.DefaultWorkingDirectory)/logs'
         publishLocation: 'pipeline'
         artifact: 'logs'
-
-    - task: Bash@3
-      displayName: 'Copy Screenshots From Run Java Test Container'
+    
+    - task: PublishPipelineArtifact@1
       inputs:
-        targetType: inline
-        script: 'docker cp tests:/target/screenshots screenshots'
-        
-    - task: Bash@3
-      displayName: 'Copy Logs From Run Java Test Container'
+        targetPath: '$(System.DefaultWorkingDirectory)/testoutput'
+        publishLocation: 'pipeline'
+        artifact: 'testoutput'
+    
+    - task: PublishTestResults@2
+      condition: always()
       inputs:
-        targetType: inline
-        script: 'docker cp tests:/target/logs logs'
-
-    - task: Bash@3
-      displayName: 'Display Folders from Default Working Directory'
-      inputs:
-        targetType: inline
-        script: 'ls $(System.DefaultWorkingDirectory)'
+        testResultsFormat: JUnit
+        testResultsFiles: '**/junitreports/TEST-*.xml'
 
     - task: Maven@3
 
@@ -99,16 +120,16 @@ stages:
         targetType: 'inline'
         script: 'ls $(System.DefaultWorkingDirectory)'
     
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publish Log File as Artifact'
-      condition: always()
-      inputs:         
-          PathtoPublish: $(System.DefaultWorkingDirectory)/logs
-          ArtifactName: logs
+    # - task: PublishBuildArtifacts@1
+    #   displayName: 'Publish Log File as Artifact'
+    #   condition: always()
+    #   inputs:         
+    #       PathtoPublish: $(System.DefaultWorkingDirectory)/logs
+    #       ArtifactName: logs
     
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publish Screenshot File as Artifact'
-      condition: always()
-      inputs:         
-          PathtoPublish: $(System.DefaultWorkingDirectory)/screenshots
-          ArtifactName: screenshots
+    # - task: PublishBuildArtifacts@1
+    #   displayName: 'Publish Screenshot File as Artifact'
+    #   condition: always()
+    #   inputs:         
+    #       PathtoPublish: $(System.DefaultWorkingDirectory)/screenshots
+    #       ArtifactName: screenshots
