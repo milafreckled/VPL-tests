@@ -49,6 +49,18 @@ stages:
       inputs:
         targetType: inline
         script: 'docker start tests' 
+    
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/screenshots'
+        publishLocation: 'pipeline'
+        artifact: 'screenshots'
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/logs'
+        publishLocation: 'pipeline'
+        artifact: 'logs'
 
     - task: Bash@3
       displayName: 'Copy Screenshots From Run Java Test Container'
@@ -67,18 +79,6 @@ stages:
       inputs:
         targetType: inline
         script: 'ls $(System.DefaultWorkingDirectory)'
-
-    - task: PublishPipelineArtifact@1
-      inputs:
-        targetPath: '$(System.DefaultWorkingDirectory)/screenshots'
-        publishLocation: 'pipeline'
-        artifact: 'screenshots'
-
-    - task: PublishPipelineArtifact@1
-      inputs:
-        targetPath: '$(System.DefaultWorkingDirectory)/logs'
-        publishLocation: 'pipeline'
-        artifact: 'logs'
 
     - task: Maven@3
 
