@@ -43,6 +43,12 @@ stages:
       inputs:
         targetType: 'inline'
         script: 'export BROWSER=$(BROWSER)'
+    
+    - task: Bash@3
+      displayName: "display files from project folder"
+      inputs:
+        targetType: 'inline'
+        script: 'ls $(System.DefaultWorkingDirectory)'
 
     - task: Bash@3
       displayName: 'Start Java Test Container'
