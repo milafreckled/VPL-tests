@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import framework.LogWriter;
+import org.example.framework.LogWriter;
 
 public class HomePage {
 
