@@ -49,6 +49,20 @@ stages:
       inputs:
         targetType: inline
         script: 'docker start tests' 
+    
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Log File as Artifact'
+      condition: always()
+      inputs:         
+          PathtoPublish: $(System.DefaultWorkingDirectory)/logs
+          ArtifactName: logs
+    
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Screenshot File as Artifact'
+      condition: always()
+      inputs:         
+          PathtoPublish: $(System.DefaultWorkingDirectory)/screenshots
+          ArtifactName: screenshots
 
     - task: Bash@3
       displayName: 'Copy Screenshots From Run Java Test Container'
@@ -120,16 +134,3 @@ stages:
         targetType: 'inline'
         script: 'ls $(System.DefaultWorkingDirectory)'
     
-    # - task: PublishBuildArtifacts@1
-    #   displayName: 'Publish Log File as Artifact'
-    #   condition: always()
-    #   inputs:         
-    #       PathtoPublish: $(System.DefaultWorkingDirectory)/logs
-    #       ArtifactName: logs
-    
-    # - task: PublishBuildArtifacts@1
-    #   displayName: 'Publish Screenshot File as Artifact'
-    #   condition: always()
-    #   inputs:         
-    #       PathtoPublish: $(System.DefaultWorkingDirectory)/screenshots
-    #       ArtifactName: screenshots
