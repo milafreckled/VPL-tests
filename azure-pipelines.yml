@@ -54,15 +54,23 @@ stages:
       displayName: 'Publish Log File as Artifact'
       condition: always()
       inputs:         
-          PathtoPublish: $(System.DefaultWorkingDirectory)/logs
+          PathtoPublish: $(System.DefaultWorkingDirectory)/target/logs
           ArtifactName: logs
     
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Screenshot File as Artifact'
       condition: always()
       inputs:         
-          PathtoPublish: $(System.DefaultWorkingDirectory)/screenshots
+          PathtoPublish: $(System.DefaultWorkingDirectory)/target/screenshots
           ArtifactName: screenshots
+    
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Testoutpu File as Artifact'
+      condition: always()
+      inputs:         
+          PathtoPublish: $(System.DefaultWorkingDirectory)/target/surefire-reports
+          ArtifactName: testoutput
 
     - task: Bash@3
       displayName: 'Copy Screenshots From Run Java Test Container'
