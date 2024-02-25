@@ -56,11 +56,6 @@ stages:
         targetType: inline
         script: 'docker start tests' 
     
-    - task: Bash@3
-      displayName: "make a directory"
-      inputs:
-        targetType: 'inline'
-        script: 'mkdir target'
     
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Log File as Artifact'
