@@ -56,6 +56,7 @@ stages:
         targetType: inline
         script: 'docker start tests' 
     
+    
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Log File as Artifact'
       condition: always()
