@@ -10,7 +10,7 @@ import org.example.framework.LogWriter;
 
 public class HomePage {
 
-    private static final By SEARCH_BOX_ID    = By.id("edit-search");
+    private static final By SEARCH_BOX_ID    = By.id("edit-keyword");
     private static final By SEARCH_BUTTON_ID = By.id("edit-submit");
 
     private final WebDriver driver;

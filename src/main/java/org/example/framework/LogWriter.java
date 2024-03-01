@@ -25,12 +25,12 @@ public class LogWriter {
 
         try(FileWriter fw = new FileWriter(logPath + "/" + logName,true))
         {
-            fw.write(LocalDateTime.now().toString() + " - " + text + "\n");
+            fw.write(LocalDateTime.now() + " - " + text + "\n");
             fw.close();
         }
         catch(IOException ioe)
         {
-            throw new RuntimeException("couldnt write text to " + logName, ioe);
+            throw new RuntimeException("couldn't write text to " + logName, ioe);
         }
     }
 }

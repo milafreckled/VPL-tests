@@ -21,7 +21,7 @@ public class ResultsPage
     private static final By PAGINATION_TEXT_XPATH =
             By.xpath("//span[@data-key = 'pagination-text']");
 
-    private static final By NEXT_PAGE_XPATH = By.xpath("//a[@data-key = 'next-btn']");
+    private static final By NEXT_PAGE_XPATH = By.className("pagination__next-chevron");
 
     private static final String PAGE_XPATH = "//a[@data-page = '%d']";
 
@@ -142,7 +142,7 @@ public class ResultsPage
             return 1;
 
         int i = url.indexOf("page=") + 5;
-        int j = url.indexOf("&query");
+        int j = url.length();
 
         String pageValue = url.substring(i,  j);
 

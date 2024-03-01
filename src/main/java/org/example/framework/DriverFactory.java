@@ -18,7 +18,7 @@ public class DriverFactory {
     {
         if (!name.equals("chrome"))
             throw new RuntimeException(name + " is  not a valid driver name!");
-
+        System.out.println(OS());
         if (isWindows())
         {
             System.setProperty("webdriver.chrome.driver",
@@ -58,6 +58,7 @@ public class DriverFactory {
         options.addArguments("--verbose");
         options.addArguments("--whitelisted-ips=");
         options.addArguments("--disable-extensions");
+        options.addArguments("--remote-allow-origins=*");
 
         return options;
     }
@@ -75,6 +76,7 @@ public class DriverFactory {
         return (
                 os.indexOf("nix") >= 0 ||
                         os.indexOf("nux") >= 0 ||
+                        os.indexOf("mac") >= 0 ||
                         os.indexOf("aix") > 0 );
 
     }

@@ -23,6 +23,7 @@ public class BaseTest {
     public void setUp() throws MalformedURLException
     {
         String browserName = System.getenv("BROWSER");
+        System.out.println(System.getenv("BROWSER"));
         this.driver        = DriverFactory.getDriver(browserName);
     }
 
