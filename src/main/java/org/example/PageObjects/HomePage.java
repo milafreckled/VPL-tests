@@ -22,7 +22,7 @@ public class HomePage {
     {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, 30);
-
+//        driver.findElement(By.id("com.google.android.keep:id/new_note_button"));
         this.traceLogWriter = new LogWriter("./target/logs", "trace.log");
     }
 

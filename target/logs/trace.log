@@ -1,0 +1,224 @@
+2024-02-25T17:53:06.245734 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-25T17:53:06.248959 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-25T17:53:06.250728 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-25T17:54:55.623596 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-25T17:54:55.630455 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-25T17:54:55.631720 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-25T17:55:42.189240 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-25T17:55:42.192190 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-25T17:55:42.193512 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-25T17:57:19.330586 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-25T17:57:19.333160 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-25T17:57:19.333727 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-25T17:57:54.725128 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-25T17:57:54.728043 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-25T17:57:54.728788 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-25T17:59:47.458044 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-25T17:59:47.460541 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-25T17:59:47.461108 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-29T15:23:49.912941 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-29T15:23:49.915372 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-29T15:23:49.916063 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-29T15:24:47.706295 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-29T15:24:47.708220 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-29T15:24:47.708920 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-29T17:23:30.488493 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-29T17:23:30.489992 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-29T17:23:30.490585 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-29T17:26:06.515782 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-29T17:26:36.700048 - Open Home Page
+2024-02-29T17:27:08.007319 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-29T17:27:33.564479 - Open Home Page
+2024-02-29T17:28:05.010582 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-29T17:28:34.294050 - Open Home Page
+2024-02-29T17:29:45.471907 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-29T17:42:18.588491 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-29T17:42:52.917920 - Open Home Page
+2024-02-29T17:44:09.972508 - HomePage - searchFor()
+2024-02-29T17:44:09.973245 - HomePage - goToResultsPage()
+2024-02-29T17:44:09.977454 - ResultsPage - isDisplayed()
+2024-02-29T17:44:10.501810 - ResultsPage() - get ResultsPerPage()
+2024-02-29T17:44:18.251752 - ResultsPage - goToPage()
+2024-02-29T17:44:27.705875 - ResultsPage() - get ResultsPerPage()
+2024-02-29T17:44:30.389611 - ResultsPage - goToPage()
+2024-02-29T17:44:35.741304 - ResultsPage() - get ResultsPerPage()
+2024-02-29T17:44:37.063972 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-29T17:45:04.807691 - Open Home Page
+2024-02-29T17:46:20.802641 - HomePage - searchFor()
+2024-02-29T17:46:20.802807 - HomePage - goToResultsPage()
+2024-02-29T17:46:20.813746 - ResultsPage - isDisplayed()
+2024-02-29T17:46:21.379433 - ResultsPage - get TotalCount()
+2024-02-29T17:46:22.405666 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-29T17:46:53.441205 - Open Home Page
+2024-02-29T17:48:16.843499 - HomePage - searchFor()
+2024-02-29T17:48:16.843852 - HomePage - goToResultsPage()
+2024-02-29T17:48:16.851992 - ResultsPage - isDisplayed()
+2024-02-29T17:48:17.634755 - ResultsPage() - get ResultsPerPage()
+2024-02-29T17:59:34.497240 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-29T18:05:29.662077 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-29T18:06:02.947975 - Open Home Page
+2024-02-29T18:07:21.221046 - HomePage - searchFor()
+2024-02-29T18:07:21.222642 - HomePage - goToResultsPage()
+2024-02-29T18:07:21.235566 - ResultsPage - isDisplayed()
+2024-02-29T18:07:21.739127 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:07:29.822542 - ResultsPage - goToPage()
+2024-02-29T18:07:39.593066 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:07:42.110886 - ResultsPage - goToPage()
+2024-02-29T18:07:47.684210 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:07:49.082044 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-29T18:08:17.257605 - Open Home Page
+2024-02-29T18:09:30.914412 - HomePage - searchFor()
+2024-02-29T18:09:30.915956 - HomePage - goToResultsPage()
+2024-02-29T18:09:30.920644 - ResultsPage - isDisplayed()
+2024-02-29T18:09:31.573414 - ResultsPage - get TotalCount()
+2024-02-29T18:09:32.624403 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-29T18:10:02.458643 - Open Home Page
+2024-02-29T18:11:20.634509 - HomePage - searchFor()
+2024-02-29T18:11:20.634985 - HomePage - goToResultsPage()
+2024-02-29T18:11:20.643654 - ResultsPage - isDisplayed()
+2024-02-29T18:11:21.310595 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:11:28.676941 - ResultsPage - goToNextPage()
+2024-02-29T18:13:30.390148 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-29T18:14:03.484028 - Open Home Page
+2024-02-29T18:15:19.873283 - HomePage - searchFor()
+2024-02-29T18:15:19.874405 - HomePage - goToResultsPage()
+2024-02-29T18:15:19.881190 - ResultsPage - isDisplayed()
+2024-02-29T18:15:20.442785 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:15:29.010693 - ResultsPage - goToPage()
+2024-02-29T18:15:38.904614 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:15:41.644482 - ResultsPage - goToPage()
+2024-02-29T18:15:47.384247 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:15:48.875770 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-29T18:16:17.411005 - Open Home Page
+2024-02-29T18:17:32.101260 - HomePage - searchFor()
+2024-02-29T18:17:32.101731 - HomePage - goToResultsPage()
+2024-02-29T18:17:32.186701 - ResultsPage - isDisplayed()
+2024-02-29T18:17:32.963217 - ResultsPage - get TotalCount()
+2024-02-29T18:17:34.027872 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-29T18:18:01.848970 - Open Home Page
+2024-02-29T18:19:14.334682 - HomePage - searchFor()
+2024-02-29T18:19:14.335811 - HomePage - goToResultsPage()
+2024-02-29T18:19:14.343280 - ResultsPage - isDisplayed()
+2024-02-29T18:19:14.863263 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:19:22.070174 - ResultsPage - goToNextPage()
+2024-02-29T18:20:17.898382 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-29T18:20:48.076035 - Open Home Page
+2024-02-29T18:22:03.251991 - HomePage - searchFor()
+2024-02-29T18:22:03.253545 - HomePage - goToResultsPage()
+2024-02-29T18:22:03.257987 - ResultsPage - isDisplayed()
+2024-02-29T18:22:03.871239 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:22:11.671659 - ResultsPage - goToPage()
+2024-02-29T18:22:21.129038 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:22:23.839143 - ResultsPage - goToPage()
+2024-02-29T18:22:30.770923 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:22:31.840322 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-29T18:23:00.314948 - Open Home Page
+2024-02-29T18:24:14.316430 - HomePage - searchFor()
+2024-02-29T18:24:14.317828 - HomePage - goToResultsPage()
+2024-02-29T18:24:14.324971 - ResultsPage - isDisplayed()
+2024-02-29T18:24:14.945764 - ResultsPage - get TotalCount()
+2024-02-29T18:24:15.982537 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-29T18:24:48.621217 - Open Home Page
+2024-02-29T18:26:05.530788 - HomePage - searchFor()
+2024-02-29T18:26:05.532101 - HomePage - goToResultsPage()
+2024-02-29T18:26:05.547373 - ResultsPage - isDisplayed()
+2024-02-29T18:26:06.107303 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:26:13.934026 - ResultsPage - goToNextPage()
+2024-02-29T18:26:23.585663 - ResultsPage() - get ResultsPerPage()
+2024-02-29T18:26:26.176415 - ResultsPage - goToNextPage()
+2024-02-29T18:26:31.688027 - ResultsPage() - get ResultsPerPage()
+2024-02-29T20:12:00.912558 - 
+ Test Name: any_Page_Has_Results_Test
+2024-02-29T20:12:31.968663 - Open Home Page
+2024-02-29T20:13:52.150735 - HomePage - searchFor()
+2024-02-29T20:13:53.248298 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-02-29T20:14:20.863 - Open Home Page
+2024-02-29T20:15:36.015902 - HomePage - searchFor()
+2024-02-29T20:15:37.127967 - 
+ Test Name: next_Page_Has_Results_Test
+2024-02-29T20:16:12.493923 - Open Home Page
+2024-02-29T20:16:59.979311 - HomePage - searchFor()
+2024-03-01T11:56:27.836967 - 
+ Test Name: any_Page_Has_Results_Test
+2024-03-01T11:56:54.837417 - Open Home Page
+2024-03-01T11:58:08.672223 - HomePage - searchFor()
+2024-03-01T11:58:09.820205 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-03-01T11:58:38.974723 - Open Home Page
+2024-03-01T11:59:54.155005 - HomePage - searchFor()
+2024-03-01T11:59:55.321327 - 
+ Test Name: next_Page_Has_Results_Test
+2024-03-01T12:00:13.796053 - 
+ Test Name: any_Page_Has_Results_Test
+2024-03-01T12:00:42.722746 - Open Home Page
+2024-03-01T12:01:58.813028 - HomePage - searchFor()
+2024-03-01T12:01:58.814263 - HomePage - goToResultsPage()
+2024-03-01T12:01:58.818772 - ResultsPage - isDisplayed()
+2024-03-01T12:01:59.522870 - ResultsPage() - get ResultsPerPage()
+2024-03-01T12:02:07.135848 - ResultsPage - goToPage()
+2024-03-01T12:02:17.137266 - ResultsPage() - get ResultsPerPage()
+2024-03-01T12:02:20.180177 - ResultsPage - goToPage()
+2024-03-01T12:02:26.021106 - ResultsPage() - get ResultsPerPage()
+2024-03-01T12:02:27.136870 - 
+ Test Name: keyword_Search_Returns_Results_Test
+2024-03-01T12:02:50.255282 - Open Home Page
+2024-03-01T12:04:04.871929 - HomePage - searchFor()
+2024-03-01T12:04:04.872826 - HomePage - goToResultsPage()
+2024-03-01T12:04:04.888255 - ResultsPage - isDisplayed()
+2024-03-01T12:04:05.637008 - ResultsPage - get TotalCount()
+2024-03-01T12:04:06.827097 - 
+ Test Name: next_Page_Has_Results_Test
+2024-03-01T12:04:34.220497 - Open Home Page
+2024-03-01T12:05:49.849279 - HomePage - searchFor()
+2024-03-01T12:05:49.849856 - HomePage - goToResultsPage()
+2024-03-01T12:05:49.862939 - ResultsPage - isDisplayed()
+2024-03-01T12:05:50.569850 - ResultsPage() - get ResultsPerPage()
+2024-03-01T12:05:58.292109 - ResultsPage - goToNextPage()
+2024-03-01T12:06:07.776003 - ResultsPage() - get ResultsPerPage()
+2024-03-01T12:06:10.006994 - ResultsPage - goToNextPage()
+2024-03-01T12:06:15.886196 - ResultsPage() - get ResultsPerPage()

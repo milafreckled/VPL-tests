@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="VPL Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/liudmylamalomuzh/Documents/VplTests">
+        <classes><class name="org.example.Tests.VplTests">
+            <methods>
+                <include name="keyword_Search_Returns_Results_Test"/>
+                <include name="any_Page_Has_Results_Test"/>
+                <include name="next_Page_Has_Results_Test"/>
+            </methods></class>
+        </classes>
+    </test>
+</suite>
